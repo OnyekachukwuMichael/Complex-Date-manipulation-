@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Complex Date Manipulation</h2>
+  <p id="complexManipulation"></p>
+  
+  <script>
+    const currentDate = new Date();
+    currentDate.setFullYear(currentDate.getFullYear() + 2);
+    currentDate.setMonth(currentDate.getMonth() -1);
+    currentDate.setDate(currentDate.getDate() + 15);
+    
+    currentDate.setHours(18);
+    currentDate.setMinutes(30);
+    currentDate.setSeconds(45);
+    
+    document.getElementById("complexManipulation").innerText = `Complex Manipulation Result: ${currentDate.toDateString()} ${currentDate.toTimeString()}`;
+    
+  </script>
+</body>
+</html>
